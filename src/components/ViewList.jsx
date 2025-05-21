@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 
 function ViewList() {
   const { id } = useParams();
-  const [listData, setListData] = useState({ name: '', movies: [] });
+  const [listData, setListData] = useState({ name: "", movies: [] });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,20 +25,19 @@ function ViewList() {
 
   return (
     <div className="view-list-container">
-      <h1>{listData.name || 'Saved Movie List'}</h1>
-      
+      <h1>{listData.name || "Saved Movie List"}</h1>
+
       {listData.movies?.length == 0 ? (
         <p>No movies in this list or list not found.</p>
       ) : (
         <div className="saved-movies">
-          {listData.movies?.map(movie => (
+          {listData.movies?.map((movie) => (
             <div className="saved-movie" key={movie.imdbID}>
               <h3>{movie.Title}</h3>
               <p>Year: {movie.Year}</p>
-              <a 
-                href={`https://www.imdb.com/title/${movie.imdbID}`} 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a
+                href={`https://www.imdb.com/title/${movie.imdbID}`}
+                target="_blank"
                 className="imdb-link"
               >
                 View on IMDB
@@ -47,8 +46,10 @@ function ViewList() {
           ))}
         </div>
       )}
-      
-      <Link to="/" className="back-link">Back to Search</Link>
+
+      <Link to="/" className="back-link">
+        Back to Search
+      </Link>
     </div>
   );
 }

@@ -7,7 +7,6 @@ body {
 
 header {
   text-align: center;
-
   background-color: #fafafa;
 }
 
@@ -48,7 +47,7 @@ header h1 {
 }
 
 .search-btn {
-  background: linear-gradient(to right, #5e72e4, #825ee4) ;
+  background: linear-gradient(to right, #5e72e4, #825ee4);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -58,13 +57,11 @@ header h1 {
   font-size: 16px;
 }
 
-.save-list-form input{ 
+.save-list-form input {
   padding: 10px;
   border: 1px solid #27548a;
   border-radius: 4px;
   font-size: 16px;
-
-  
 }
 
 .movie-list {
@@ -192,14 +189,13 @@ header h1 {
   font-weight: bold;
 }
 
-.back-link{
+.back-link {
   background-color: #5e72e4;
   text-decoration: none;
   color: white;
   padding: 6px;
   border-radius: 4px;
   margin-left: 350px;
-  
 }
 
 .view-list-container {
@@ -250,11 +246,38 @@ header h1 {
   margin-top: 10px;
 }
 
+@media (max-width: 515px) {
+  .right-section {
+    width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
   }
   .right-section {
-    width: 100%;
+    width: 95%;
+  }
+  .back-link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: fit-content;
+  }
+
+  .view-list-container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .view-list-container h1,
+  .view-list-container h2 {
+    font-size: 20px;
+  }
+
+  .saved-movie {
+    padding: 10px;
   }
 }

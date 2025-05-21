@@ -54,7 +54,7 @@ function Home() {
   const saveList = (listName) => {
     if (selectedMovies.length == 0 || !listName) return;
 
-    const id = 'list_' + Math.random().toString(36).substr(2, 9);
+    const id = 'list_' + Math.random().toString(36).slice(2, 9);
     localStorage.setItem(id, JSON.stringify({
       name: listName,
       movies: selectedMovies
